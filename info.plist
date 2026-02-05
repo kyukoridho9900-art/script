@@ -1,0 +1,24 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/ridhoplaylist/ios/Runner/Info.plist b/ridhoplaylist/ios/Runner/Info.plist
+new file mode 100644
+index 0000000000000000000000000000000000000000..c8d1819aab540ba45482b75abc20db86cbbc4777
+--- /dev/null
++++ b/ridhoplaylist/ios/Runner/Info.plist
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
++<plist version="1.0">
++<dict>
++  <key>CFBundleDisplayName</key>
++  <string>ridhoplaylist</string>
++  <key>UIFileSharingEnabled</key>
++  <true/>
++  <key>LSSupportsOpeningDocumentsInPlace</key>
++  <true/>
++  <key>NSDocumentsFolderUsageDescription</key>
++  <string>RidhoPlaylist membutuhkan akses ke file MP3 lokal.</string>
++</dict>
++</plist>
+ 
+EOF
+)
