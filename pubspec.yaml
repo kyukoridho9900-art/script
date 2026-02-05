@@ -1,0 +1,29 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/ridhoplaylist/pubspec.yaml b/ridhoplaylist/pubspec.yaml
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c2178f9bf5f09e1e93d5f534ce52f233d1ba782
+--- /dev/null
++++ b/ridhoplaylist/pubspec.yaml
+@@ -0,0 +1,19 @@
++name: ridhoplaylist
++description: Spotify-inspired local playlist and MP3 player.
++publish_to: 'none'
++version: 1.0.0+1
++
++environment:
++  sdk: '>=3.3.0 <4.0.0'
++
++dependencies:
++  flutter:
++    sdk: flutter
++  cupertino_icons: ^1.0.6
++  file_picker: ^8.0.0
++  just_audio: ^0.9.37
++  path: ^1.9.0
++  permission_handler: ^11.3.0
++
++flutter:
++  uses-material-design: true
+ 
+EOF
+)
